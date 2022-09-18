@@ -1,5 +1,6 @@
 # Flower 進階練習
 使用 mnist data 來預測數字吧
+> 初始練習-[第一次接觸 Flower 就上手](https://hackmd.io/@GvGUX7NOQlezhmIjgNA4tw/Hy9Lfnrej)
 ## 硬體設備及環境
 - 作業系統 Windows11 專業版 21H2
 - 中央處理器 AMD Ryzen 5 5600X CPU @ 3.70GHz
@@ -170,3 +171,5 @@ if __name__ == "__main__":
 ![](https://i.imgur.com/JILffZU.png)
 ### Client2
 ![](https://i.imgur.com/IMGE3uH.png)
+
+[程式碼](https://github.com/sheway/Flower_mnist)
