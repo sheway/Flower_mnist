@@ -164,7 +164,7 @@ if __name__ == "__main__":
 ```
 ## 實驗結果
 由於兩個 Client 端使用的訓練資料不同，訓練出的 Model 也不同，因此 Accuracy 也不同，不過 Testing data 相同，Server 在合併完 weights 後，兩者在驗證時的 Accuracy 會相同，且 Validate 的 Accuracy也有增加。
-第 1、3、5 次訓練為 Client 端的訓練結果，第 2、4、6 次為聚合後的 Global Model 傳回 Client 端做 evaluate 的結果，第 7 次為訓練結束後使用 Global Model 到各個 Client 來做 evaluate 的結果。由於兩個 Client 端的驗政測資相同，所以跑出相同結果。
+第 1、3、5 次訓練為 Client 端的訓練結果，第 2、4、6 次為聚合後的 Global Model 傳回 Client 端做 evaluate 的結果，第 7 次為訓練結束後使用 Global Model 到各個 Client 來做 evaluate 的結果。由於兩個 Client 端的驗證測資相同，所以跑出相同結果。
 
 ### Client1
 ![](https://i.imgur.com/JILffZU.png)
