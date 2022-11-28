@@ -55,7 +55,7 @@ y_test = np_utils.to_categorical(y_test)
 
 # Define Flower client
 class CifarClient(fl.client.NumPyClient):
-    def get_parameters(self):
+    def get_parameters(self, config):
         return model.get_weights()
 
     def fit(self, parameters, config):
@@ -74,7 +74,7 @@ class CifarClient(fl.client.NumPyClient):
 
 # Start Flower client
 fl.client.start_numpy_client(
-    "localhost:7001",
+    server_address="localhost:7001",
     client=CifarClient(),
     # grpc_max_message_length=1024 * 1024 * 1024
 )
