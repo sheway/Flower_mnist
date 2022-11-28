@@ -3,7 +3,6 @@ from typing import Dict
 import flwr as fl
 from keras.models import Sequential
 from keras.layers import Dense, Flatten, Conv2D, MaxPool2D, Dropout
-from flwr.common import weights_to_parameters
 import numpy as np
 import os
 
@@ -40,9 +39,9 @@ if __name__ == "__main__":
 
     # Start Flower server
     fl.server.start_server(
-        server_address="localhost:7001",
-        config={"num_rounds": 3},
+        server_address='localhost:7001',
+        config=fl.server.ServerConfig(num_rounds=3),
         strategy=strategy,
         # grpc_max_message_length=1024 * 1024 * 1024,
-        force_final_distributed_eval=True
+        # force_final_distributed_eval=True
     )
